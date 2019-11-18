@@ -1,4 +1,4 @@
-package com.suixingpay.bean;
+package com.suixingpay.entities;
 
 public class user {
     private int id;
