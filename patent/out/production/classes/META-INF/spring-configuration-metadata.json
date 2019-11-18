@@ -1,0 +1,12 @@
+{
+  "groups": [
+    {
+      "name": "spring.datasource",
+      "type": "javax.sql.DataSource",
+      "sourceType": "com.suixingpay.config.DruidConfig",
+      "sourceMethod": "druid()"
+    }
+  ],
+  "properties": [],
+  "hints": []
+}
