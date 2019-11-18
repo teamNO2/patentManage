@@ -7,6 +7,6 @@ import org.springframework.web.context.annotation.SessionScope;
 @Mapper
 public interface HelloMapper {
 
-    @Select("")
-    public int getId();
+    @Select("select name from user where id = #{id}")
+    public String getName(int id);
 }
