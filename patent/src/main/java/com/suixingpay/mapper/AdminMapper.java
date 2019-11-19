@@ -36,7 +36,7 @@ public interface AdminMapper {
 
 
     /**
-     * @Description:
+     * @Description: 管理员模糊查询
      * @Param: [name, inventorName, caseNumber, applyNumber, lawStatus, applyDate]
      * @return: java.util.List<com.suixingpay.entities.Patent>
      * @Author: lichanghao

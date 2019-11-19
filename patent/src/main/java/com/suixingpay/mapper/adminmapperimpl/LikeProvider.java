@@ -1,5 +1,8 @@
 package com.suixingpay.mapper.adminmapperimpl;
 
+import com.suixingpay.entities.Patent;
+import com.suixingpay.entities.Target;
+
 import java.util.Date;
 
 /**
@@ -12,7 +15,7 @@ import java.util.Date;
 public class LikeProvider {
     public String likeSelectAll(String name, String inventorName, String caseNumber, String applyNumber, String lawStatus, String applyDate){
         System.out.println("开始查询");
-        StringBuffer sql=new StringBuffer("select id,name,caseNumber,applyNumber,applyDate,inventorName,lawStatus,proposerName from Patent  where ");
+        StringBuffer sql=new StringBuffer("select id,name,caseNumber,applyNumber,applyDate,inventorName,lawStatus,proposerName from Patent  where 1=1");
         if (!name.equals("-1")){
             sql.append("  name like '%"+name+"%' ");
         }
@@ -34,6 +37,33 @@ public class LikeProvider {
 
         if (!applyDate.equals(new Date(1,2,3).toString())){
             sql.append(" and applyDate like '%"+applyDate+"%' ");
+        }
+        System.out.println(sql.toString());
+        return sql.toString();
+    }
+    public String likeSelectTarget(Target target, Patent patent){
+        StringBuffer sql = new StringBuffer("select t.name, p.name, proposerName, inventorName, lawStatus, applyDate from Target t,Patent p where t.patentId = p.id and 1=1");
+        if (!target.getName().equals("-1")){
+            sql.append("  t.name like '%"+target.getName()+"%' ");
+        }
+        if (!patent.getName().equals("-1")){
+            sql.append(" and p.name like '%"+patent.getName()+"%' ");
+        }
+
+        if (!patent.getProposerName().equals("-1")){
+            sql.append(" and proposerName like '%"+patent.getProposerName()+"%' ");
+        }
+
+        if (!patent.getInventorName().equals("-1")){
+            sql.append(" and inventorName like '%"+patent.getInventorName()+"%' ");
+        }
+
+        if (!patent.getLawStatus().equals("-1")){
+            sql.append(" and lawStatus like '%"+patent.getLawStatus()+"%' ");
+        }
+
+        if (!patent.getApplyDate().equals(new Date(1,2,3).toString())){
+            sql.append(" and applyDate like '%"+patent.getApplyDate()+"%' ");
         }
         System.out.println(sql.toString());
         return sql.toString();

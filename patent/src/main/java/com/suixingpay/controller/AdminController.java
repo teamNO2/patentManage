@@ -26,6 +26,16 @@ public class AdminController {
         return adminService.getCheckPatent();
     }
 
+
+
+
+    /**
+     * @Description: 管理员模糊查询：controller
+     * @Param: [patent]
+     * @return: java.util.List<com.suixingpay.entities.Patent>
+     * @Author: lichanghao
+     * @Date: 2019/11/19
+     */
     @PostMapping("/getAll")
     public List<Patent> getAll(@RequestBody Patent patent){
         System.out.println("10000");
@@ -33,6 +43,7 @@ public class AdminController {
         if(name==null){
             name="-1";
         }
+
         System.out.println("20000");
         String inventorName = patent.getInventorName();
         if(inventorName==null){
