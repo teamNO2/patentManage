@@ -7,7 +7,6 @@ import org.springframework.stereotype.Component;
 import java.util.Date;
 @Data
 @Builder
-@Component
 public class History {
     private int id;
     private Date curDate;

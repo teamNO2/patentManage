@@ -9,7 +9,6 @@ import java.util.Date;
 
 @Data
 @Builder
-@Component
 public class Patent {
     private int id;
     private String name;
