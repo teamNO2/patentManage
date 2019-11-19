@@ -1,6 +1,5 @@
 package com.suixingpay.entities;
 
-
 import org.springframework.stereotype.Component;
 
 import java.util.Date;

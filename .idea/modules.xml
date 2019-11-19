@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/patentManage.iml" filepath="$PROJECT_DIR$/.idea/modules/patentManage.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/.idea/patentManage.iml" filepath="$PROJECT_DIR$/.idea/patentManage.iml" />
+>>>>>>> origin/master
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/patent/patentManage.patent.iml" filepath="$PROJECT_DIR$/.idea/modules/patent/patentManage.patent.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/patent/patentManage.patent.main.iml" filepath="$PROJECT_DIR$/.idea/modules/patent/patentManage.patent.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/patent/patentManage.patent.test.iml" filepath="$PROJECT_DIR$/.idea/modules/patent/patentManage.patent.test.iml" />

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="4d8b3fcd-0150-414e-8b52-b3ad01491219" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/patent/build/classes/java/main/com/suixingpay/config/MyHandlerIntercepter.class" afterDir="false" />
@@ -46,6 +47,9 @@
     <ignored path="$PROJECT_DIR$/build/" />
     <ignored path="$PROJECT_DIR$/patent/.gradle/" />
     <ignored path="$PROJECT_DIR$/patent/build/" />
+=======
+    <list default="true" id="4d8b3fcd-0150-414e-8b52-b3ad01491219" name="Default Changelist" comment="" />
+>>>>>>> origin/master
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +59,6 @@
   <component name="DefaultGradleProjectSettings">
     <option name="testRunner" value="GRADLE" />
     <option name="delegatedBuild" value="true" />
-    <option name="isMigrated" value="true" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -85,6 +88,7 @@
       </state>
     </system>
   </component>
+<<<<<<< HEAD
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
@@ -112,9 +116,12 @@
       </file>
     </leaf>
   </component>
+=======
+>>>>>>> origin/master
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -122,6 +129,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+<<<<<<< HEAD
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -269,6 +277,10 @@
       </pane>
     </panes>
   </component>
+=======
+  <component name="ProjectId" id="1ToY3hCfTXu0gVf3Tcjzi0bmgiW" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+>>>>>>> origin/master
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
@@ -343,7 +355,11 @@
       <option name="presentableId" value="Default" />
       <updated>1574065819314</updated>
       <workItem from="1574065821220" duration="7280000" />
+<<<<<<< HEAD
       <workItem from="1574143652699" duration="321000" />
+=======
+      <workItem from="1574127720259" duration="9259000" />
+>>>>>>> origin/master
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <created>1574071119173</created>
@@ -366,9 +382,24 @@
       <option name="project" value="LOCAL" />
       <updated>1574076909313</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="管理员未审核界面">
+      <created>1574142719811</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1574142719811</updated>
+    </task>
+    <task id="LOCAL-00005" summary="管理员未审核界面">
+      <created>1574142802302</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1574142802303</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
+<<<<<<< HEAD
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="7601000" />
   </component>
@@ -411,11 +442,25 @@
       <window_info anchor="right" id="Bean Validation" order="10" />
     </layout>
   </component>
+=======
+>>>>>>> origin/master
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="初始化" />
+<<<<<<< HEAD
     <option name="LAST_COMMIT_MESSAGE" value="初始化" />
   </component>
   <component name="editorHistoryManager">
@@ -534,6 +579,10 @@
         </state>
       </provider>
     </entry>
+=======
+    <MESSAGE value="管理员未审核界面" />
+    <option name="LAST_COMMIT_MESSAGE" value="管理员未审核界面" />
+>>>>>>> origin/master
   </component>
   <component name="masterDetails">
     <states>
