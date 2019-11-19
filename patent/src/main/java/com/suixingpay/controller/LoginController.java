@@ -23,6 +23,12 @@ public class LoginController {
     @Autowired
     private LoginService loginService;
 
+    /**
+     * 孙克强
+     * @param user
+     * @param request
+     * @return
+     */
     @PostMapping("/login")
     @ResponseBody
     public User login(User user, HttpServletRequest request) {
