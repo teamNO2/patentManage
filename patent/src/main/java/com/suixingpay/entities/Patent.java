@@ -3,11 +3,13 @@ package com.suixingpay.entities;
 
 import lombok.Builder;
 import lombok.Data;
+import org.springframework.stereotype.Component;
 
 import java.util.Date;
 
 @Data
 @Builder
+@Component
 public class Patent {
     private int id;
     private String name;
