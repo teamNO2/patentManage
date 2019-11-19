@@ -15,8 +15,26 @@ public class AdminController {
     @Autowired
     private AdminService adminService;
 
+    /**
+     *@ClassName ${}
+     *@Description 根据状态查询待审核详细专利
+     *@Author ${张佳鑫}
+     *@Date ${2019.11.19} ${11:00}
+     *@Version 1.0
+     */
     @GetMapping("/checkPatent")
     public List<Patent> checkPatent(){
         return adminService.getCheckPatent();
     }
+
+    /**
+     *@ClassName ${}
+     *@Description 根据案件文号修改待审核详细专利
+     *@Author ${张佳鑫}
+     *@Date ${2019.11.19} ${11:00}
+     *@Version 1.0
+     */
+    @GetMapping("/updatecheckPatentStatus")
+    public int updateCheckPatentStatus(){return adminService.updateCheckPatentStatus(0);}
+
 }
