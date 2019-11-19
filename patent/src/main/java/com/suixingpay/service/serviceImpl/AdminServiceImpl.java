@@ -18,4 +18,11 @@ public class AdminServiceImpl implements AdminService {
     public List<Patent> getCheckPatent() {
         return adminMapper.getCheckPatent();
     }
+
+    @Override
+    public List<Patent> getLikeSelectAll(String name, String inventorName, String caseNumber, String applyNumber, String lawStatus, String applyDate) {
+        System.out.println("1111");
+        return adminMapper.likeSelectAll(name,inventorName,caseNumber,applyNumber,lawStatus,applyDate);
+
+    }
 }
