@@ -6,7 +6,6 @@ import org.springframework.stereotype.Component;
 
 @Data
 @Builder
-
 public class Target {
     private int id;
     private String name;
