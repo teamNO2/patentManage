@@ -16,25 +16,19 @@ CREATE DATABASE /*!32312 IF NOT EXISTS*/`patent-manage` /*!40100 DEFAULT CHARACT
 
 USE `patent-manage`;
 
-/*Table structure for table `datafix` */
+/*Table structure for table `document` */
 
-DROP TABLE IF EXISTS `datafix`;
+DROP TABLE IF EXISTS `document`;
 
-CREATE TABLE `datafix` (
+CREATE TABLE `document` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
-  `disclosurePaper` varchar(255) DEFAULT NULL COMMENT '交底书路径',
-  `petitionPaper` varchar(255) DEFAULT NULL COMMENT '申请书路径',
-  `acceptancePaper` varchar(255) DEFAULT NULL COMMENT '受理书路径',
-  `preliminaryPaper` varchar(255) DEFAULT NULL COMMENT '初审合格通知书路径',
-  `publishPaper` varchar(255) DEFAULT NULL COMMENT '公布及进入实审通知书路径',
-  `replyPaper` varchar(255) DEFAULT NULL COMMENT '答复文件',
-  `registerPaper` varchar(255) DEFAULT NULL COMMENT '授权办登通知书路径',
-  `rejectPaper` varchar(255) DEFAULT NULL COMMENT '驳回通知书路径',
-  `certificatePaper` varchar(255) DEFAULT NULL COMMENT '证书路径',
+  `documentType` int(11) DEFAULT NULL COMMENT '0：交底书。。。。。。',
+  `curDate` date DEFAULT NULL COMMENT '当前时间',
+  `documentPath` varchar(255) DEFAULT NULL COMMENT '文档地址',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-/*Data for the table `datafix` */
+/*Data for the table `document` */
 
 /*Table structure for table `history` */
 
@@ -64,25 +58,14 @@ CREATE TABLE `patent` (
   `technicalPerson` varchar(255) DEFAULT NULL COMMENT '技术联系人',
   `remark` varchar(255) DEFAULT NULL COMMENT '备注',
   `applyDate` date DEFAULT NULL COMMENT '申请日期',
-  `lawStatus` int(11) DEFAULT NULL COMMENT '法律状态0：发明初合1：结案2：未提交',
-  `patentType` int(11) DEFAULT NULL COMMENT '专利类型主键id',
+  `lawStatus` varchar(255) DEFAULT NULL COMMENT '法律状态(直接写汉字就行)',
+  `patentType` varchar(255) DEFAULT NULL COMMENT '专利类型(直接写汉字就行)',
   `status` int(11) DEFAULT NULL COMMENT '0:待审核1：审核未通过2：审核通过，未认领3：已被认领 4：交底书撰写5：',
+  `batch` varchar(255) DEFAULT NULL COMMENT '批次',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `patent` */
-
-/*Table structure for table `patenttype` */
-
-DROP TABLE IF EXISTS `patenttype`;
-
-CREATE TABLE `patenttype` (
-  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
-  `name` varchar(255) DEFAULT NULL COMMENT '专利类型名称',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-/*Data for the table `patenttype` */
 
 /*Table structure for table `target` */
 
