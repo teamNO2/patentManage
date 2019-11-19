@@ -1,21 +1,17 @@
 package com.suixingpay.entities;
 
 
-import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
-import java.util.Date;
 
+import java.util.Date;
 
 @Data
 @Builder
-@NoArgsConstructor
-@AllArgsConstructor
 public class Patent {
-
     private int id;
     private String name;
+
     //申请人中文名称（撰写人）
     private String proposerName;
 

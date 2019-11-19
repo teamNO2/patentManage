@@ -2,6 +2,7 @@ package com.suixingpay.entities;
 
 import lombok.Builder;
 import lombok.Data;
+import org.springframework.stereotype.Component;
 
 import java.util.Date;
 @Data
