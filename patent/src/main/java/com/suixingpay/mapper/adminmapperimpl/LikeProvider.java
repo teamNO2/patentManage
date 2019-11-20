@@ -17,7 +17,7 @@ public class LikeProvider {
         System.out.println("开始查询");
         StringBuffer sql=new StringBuffer("select id,name,caseNumber,applyNumber,applyDate,inventorName,lawStatus,proposerName from Patent  where 1=1");
         if (!name.equals("-1")){
-            sql.append("  name like '%"+name+"%' ");
+            sql.append(" and name like '%"+name+"%' ");
         }
         if (!inventorName.equals("-1")){
             sql.append(" and inventorName like '%"+inventorName+"%' ");
