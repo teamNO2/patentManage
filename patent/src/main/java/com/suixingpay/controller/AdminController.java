@@ -33,6 +33,7 @@ public class AdminController {
      *@Author ${张佳鑫}
      *@Date ${2019.11.19} ${11:00}
      *@Version 1.0
+     * **
      */
     @GetMapping("/updatecheckPatentStatus")
     public int updateCheckPatentStatus(){return adminService.updateCheckPatentStatus(0);}
