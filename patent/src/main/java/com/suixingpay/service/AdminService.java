@@ -31,7 +31,7 @@ public interface AdminService {
      * @Author: lichanghao
      * @Date: 2019/11/19
      */
-    public List<Patent> getLikeSelectAll(Patent patent);
-    
+    public List<Patent> getLikeSelectAll(String name, String inventorName, String caseNumber, String applyNumber, String lawStatus, String applyDate);
+
 
 }

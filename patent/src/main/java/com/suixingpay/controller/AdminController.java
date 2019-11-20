@@ -2,12 +2,14 @@ package com.suixingpay.controller;
 
 import com.suixingpay.entities.Patent;
 import com.suixingpay.service.AdminService;
+import com.suixingpay.service.serviceImpl.AdminServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -15,6 +17,8 @@ public class AdminController {
 
     @Autowired
     private AdminService adminService;
+    @Autowired
+    private AdminServiceImpl adminServiceImpl;
 
     /**
      *@ClassName ${}
@@ -67,7 +71,15 @@ public class AdminController {
             lawStatus="-1";
         }
         System.out.println("60000");
-        return null;
+        if(patent.getApplyDate()==null){
+            patent.setApplyDate(new Date(1,2,3));
+            System.out.println(patent.getApplyDate());
+        }
+        String applyDate = patent.getApplyDate().toString();
+
+        System.out.println("70000");
+        System.out.println(name+inventorName+caseNumber+applyNumber+lawStatus+applyDate);
+        return  adminServiceImpl.getLikeSelectAll(name,  inventorName,  caseNumber,  applyNumber,  lawStatus,  applyDate);
     }
 
     /**

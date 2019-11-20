@@ -49,6 +49,9 @@ public interface AdminMapper {
     @Update("update patent set status = 1 where caseNumber = 0")
     public int updateCheckPatentStatus();
 
+
+
+
     /**
      * @Description: 管理员模糊查询
      * @Param: [name, inventorName, caseNumber, applyNumber, lawStatus, applyDate]
@@ -58,6 +61,9 @@ public interface AdminMapper {
      */
     @SelectProvider(type = LikeProvider.class,method = "likeSelectAll")
     List<Patent> likeSelectAll(String name, String inventorName, String caseNumber, String applyNumber, String lawStatus, String applyDate);
+
+
+
 
     /**
      *@ClassName ${}

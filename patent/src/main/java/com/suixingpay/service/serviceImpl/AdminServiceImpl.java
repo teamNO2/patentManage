@@ -48,10 +48,19 @@ public class AdminServiceImpl implements AdminService {
         }
     }
 
+
+
+    /**
+     * @Description: 管理员模糊查询：service实现
+     * @Param: [patent]
+     * @return: java.util.List<com.suixingpay.entities.Patent>
+     * @Author: lichanghao
+     * @Date: 2019/11/20
+     */
     @Override
-    public List<Patent> getLikeSelectAll(Patent patent) {
+    public List<Patent> getLikeSelectAll(String name, String inventorName, String caseNumber, String applyNumber, String lawStatus, String applyDate) {
         System.out.println("1111");
-        return adminMapper.likeSelectAll(patent.getName(), patent.getInventorName(), patent.getCaseNumber(), patent.getApplyNumber(), patent.getLawStatus(), patent.getApplyDate().toString());
+        return adminMapper.likeSelectAll(name,  inventorName,  caseNumber,  applyNumber,  lawStatus,  applyDate);
 
     }
 
