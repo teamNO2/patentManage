@@ -2,15 +2,11 @@ package com.suixingpay.controller;
 
 import com.suixingpay.entities.Patent;
 import com.suixingpay.service.AdminService;
-import com.suixingpay.service.serviceImpl.AdminServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.xml.crypto.Data;
-import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -18,9 +14,14 @@ public class AdminController {
 
     @Autowired
     private AdminService adminService;
-    @Autowired
-    private AdminServiceImpl adminServiceImpl;
 
+    /**
+     *@ClassName ${}
+     *@Description 根据状态查询待审核详细专利
+     *@Author ${张佳鑫}
+     *@Date ${2019.11.19} ${11:00}
+     *@Version 1.0
+     */
     @GetMapping("/checkPatent")
     public List<Patent> checkPatent(){
         return adminService.getCheckPatent();
@@ -66,15 +67,15 @@ public class AdminController {
         }
         System.out.println("60000");
 
+    /**
+     *@ClassName ${}
+     *@Description 根据案件文号修改待审核详细专利
+     *@Author ${张佳鑫}
+     *@Date ${2019.11.19} ${11:00}
+     *@Version 1.0
+     * **
+     */
+    @GetMapping("/updatecheckPatentStatus")
+    public int updateCheckPatentStatus(){return adminService.updateCheckPatentStatus(0);}
 
-        if(patent.getApplyDate()==null){
-            patent.setApplyDate(new Date(1,2,3));
-            System.out.println(patent.getApplyDate());
-        }
-        String applyDate = patent.getApplyDate().toString();
-
-        System.out.println("70000");
-        System.out.println(name+inventorName+caseNumber+applyNumber+lawStatus+applyDate);
-        return  adminServiceImpl.getLikeSelectAll( name,  inventorName,  caseNumber,  applyNumber,  lawStatus,  applyDate);
-    }
 }

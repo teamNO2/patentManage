@@ -42,10 +42,24 @@ public class Patent {
     //批次
     private String batch;
 
+    private int userId;
+
+    public Patent(int id) {
+        this.id = id;
+    }
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
+
     public Patent() {
     }
 
-    public Patent(int id, String name, String proposerName, String caseNumber, String inventorName, String applyNumber, String technicalPerson, String remark, Date applyDate, String lawStatus, String patentType, int status, String batch) {
+    public Patent(int id, String name, String proposerName, String caseNumber, String inventorName, String applyNumber, String technicalPerson, String remark, Date applyDate, String lawStatus, String patentType, int status, String batch,int userId) {
         this.id = id;
         this.name = name;
         this.proposerName = proposerName;
@@ -59,6 +73,7 @@ public class Patent {
         this.patentType = patentType;
         this.status = status;
         this.batch = batch;
+        this.userId = userId;
     }
 
     public int getId() {
@@ -181,6 +196,7 @@ public class Patent {
                 ", patentType='" + patentType + '\'' +
                 ", status=" + status +
                 ", batch='" + batch + '\'' +
+                ", userId=" + userId +
                 '}';
     }
 }
