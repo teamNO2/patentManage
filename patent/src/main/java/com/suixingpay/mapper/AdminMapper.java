@@ -2,10 +2,12 @@ package com.suixingpay.mapper;
 
 import com.suixingpay.entities.Patent;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.ResultMap;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 import org.springframework.web.bind.annotation.Mapping;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -58,4 +60,7 @@ public interface AdminMapper {
      */
     @Select("Select status from patent where caeNumber = 0")
     public int getCheckPatentStatus();
+
+
+
 }
