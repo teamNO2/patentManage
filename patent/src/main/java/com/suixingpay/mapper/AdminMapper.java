@@ -37,6 +37,7 @@ public interface AdminMapper {
      *@Author ${张佳鑫}
      *@Date ${2019.11.19} ${11:00}
      *@Version 1.0
+     * **
      */
 
     @Update("update patent set status = (status+1) where caseNumber = 0")
