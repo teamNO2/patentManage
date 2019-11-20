@@ -23,6 +23,15 @@ public interface AdminService {
      * ***
      */
     public int updateCheckPatentStatus(int a);
+
+    /**
+     * @Description: 管理员模糊查询 Service层
+     * @Param: []
+     * @return: java.util.List<com.suixingpay.entities.Patent>
+     * @Author: lichanghao
+     * @Date: 2019/11/19
+     */
+    public List<Patent> getLikeSelectAll(Patent patent);
     
 
 }

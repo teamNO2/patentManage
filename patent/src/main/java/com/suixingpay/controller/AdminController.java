@@ -67,6 +67,7 @@ public class AdminController {
             lawStatus="-1";
         }
         System.out.println("60000");
+        return null;
     }
 
     /**
