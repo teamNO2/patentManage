@@ -34,4 +34,14 @@ public interface AdminService {
     public List<Patent> getLikeSelectAll(String name, String inventorName, String caseNumber, String applyNumber, String lawStatus, String applyDate);
 
 
+    /**
+    * @Description: 管理页面展示所有的专利信息
+    * @Param: []
+    * @return: java.util.List<com.suixingpay.entities.Patent>
+    * @Author: 文状
+    * @Date: 2019/11/20
+    */
+    public List<Patent> getAllPatent();
+
+
 }

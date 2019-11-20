@@ -14,6 +14,7 @@ public class AdminServiceImpl implements AdminService {
     @Autowired
     private AdminMapper adminMapper;
 
+
     /**
      *@ClassName ${}
      *@Description 根据状态查询待审核详细专利
@@ -62,6 +63,22 @@ public class AdminServiceImpl implements AdminService {
         System.out.println("1111");
         return adminMapper.likeSelectAll(name,  inventorName,  caseNumber,  applyNumber,  lawStatus,  applyDate);
 
+    }
+
+
+
+
+
+    @Override
+    /**
+    * @Description: 管理页面展示所有的专利信息
+    * @Param: []
+    * @return: java.util.List<com.suixingpay.entities.Patent>
+    * @Author: 文状
+    * @Date: 2019/11/20
+    */
+    public List<Patent> getAllPatent() {
+        return adminMapper.getAllPatent();
     }
 
 }

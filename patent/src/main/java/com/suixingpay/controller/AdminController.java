@@ -4,10 +4,7 @@ import com.suixingpay.entities.Patent;
 import com.suixingpay.service.AdminService;
 import com.suixingpay.service.serviceImpl.AdminServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
 import java.util.List;
@@ -19,6 +16,7 @@ public class AdminController {
     private AdminService adminService;
     @Autowired
     private AdminServiceImpl adminServiceImpl;
+
 
     /**
      *@ClassName ${}
@@ -92,5 +90,16 @@ public class AdminController {
      */
     @GetMapping("/updatecheckPatentStatus")
     public int updateCheckPatentStatus(){return adminService.updateCheckPatentStatus(0);}
+
+    /**
+    * @Description: 在管理界面查询专利所有信息
+    * @Param: []
+    * @return: java.util.List<com.suixingpay.entities.Patent>
+    * @Author: 文状
+    * @Date: 2019/11/20
+    */
+    @GetMapping("/AllPatent")
+    public List<Patent> getAllPatent() { return adminService.getAllPatent();
+    }
 
 }

@@ -17,7 +17,6 @@ import java.util.List;
  */
 @Mapper
 public interface AdminMapper {
-
     /**
      *@ClassName ${}
      *@Description 根据状态查询待审核详细专利
@@ -74,6 +73,22 @@ public interface AdminMapper {
      */
     @Select("Select status from patent where caeNumber = 0")
     public int getCheckPatentStatus();
+
+   /**
+   * @Description: 管理页面展示所有的专利信息
+   * @Param: []
+   * @return: java.util.List<com.suixingpay.entities.Patent>
+   * @Author: 文状
+   * @Date: 2019/11/20
+   */
+    @Select("select id,name,caseNumber,applyNumber,applyDate,inventorName," +
+            "lawStatus,proposerName from patent where status=2 or status=3" +
+            " order by status asc")
+    public List<Patent> getAllPatent();
+
+
+
+
 
 
 }
