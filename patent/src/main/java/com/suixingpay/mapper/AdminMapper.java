@@ -1,10 +1,8 @@
 package com.suixingpay.mapper;
 
 import com.suixingpay.entities.Patent;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.ResultMap;
-import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.Update;
+import com.suixingpay.mapper.adminmapperimpl.LikeProvider;
+import org.apache.ibatis.annotations.*;
 import org.springframework.web.bind.annotation.Mapping;
 
 import java.util.ArrayList;
