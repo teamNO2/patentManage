@@ -2,7 +2,8 @@
 SQLyog Ultimate v8.32 
 MySQL - 5.5.36 : Database - patent-manage
 *********************************************************************
-*/
+*/
+
 
 /*!40101 SET NAMES utf8 */;
 
@@ -62,6 +63,7 @@ CREATE TABLE `patent` (
   `patentType` varchar(255) DEFAULT NULL COMMENT '专利类型(直接写汉字就行)',
   `status` int(11) DEFAULT NULL COMMENT '0:待审核1：审核未通过2：审核通过，未认领3：已被认领 4：交底书撰写5：',
   `batch` varchar(255) DEFAULT NULL COMMENT '批次',
+  `userId` int(11) DEFAULT NULL COMMENT '用户id'
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
